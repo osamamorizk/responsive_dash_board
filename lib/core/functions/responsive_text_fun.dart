@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-double responsiveTextSize(BuildContext context, {required double fontSize}) {
+double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
   double scaleFactor = getScaleFactor(context);
   double responsiveSize = scaleFactor * fontSize;
   double lowerLimit = fontSize * .8;
