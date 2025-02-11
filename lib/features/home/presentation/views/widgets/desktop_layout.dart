@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_ui_app/features/home/presentation/views/widgets/custom_drawer.dart';
+import 'package:responsive_ui_app/features/home/presentation/views/widgets/custom_drawer1.dart';
 import 'package:responsive_ui_app/features/home/presentation/views/widgets/desktop_custom_item.dart';
 import 'package:responsive_ui_app/features/home/presentation/views/widgets/tablet_layout.dart';
 
@@ -10,7 +10,7 @@ class DesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(child: CustomDrawer()),
+        Expanded(child: CustomDrawer1()),
         Expanded(
             flex: 3,
             child: Padding(

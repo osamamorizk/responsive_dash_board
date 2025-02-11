@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomDrawer extends StatelessWidget {
-  const CustomDrawer({
+class CustomDrawer1 extends StatelessWidget {
+  const CustomDrawer1({
     super.key,
   });
 
