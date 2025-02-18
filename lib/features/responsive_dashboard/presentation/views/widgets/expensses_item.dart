@@ -14,7 +14,9 @@ class AllExpensesItem extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
       decoration: BoxDecoration(
         color: isSelected ? Color(0xff4EB7F2) : null,
-        border: Border.all(width: .3, color: Colors.grey.shade400),
+        border: Border.all(
+            width: .3,
+            color: isSelected ? Colors.transparent : Colors.grey.shade400),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -25,12 +27,12 @@ class AllExpensesItem extends StatelessWidget {
               CircleAvatar(
                 radius: 30,
                 backgroundColor:
-                    isSelected ? Colors.white.withAlpha(20) : Color(0xffFAFAFA),
+                    isSelected ? Color(0xff5FBEF3) : Color(0xffFAFAFA),
                 child: Center(
                     child: SvgPicture.asset(
                   expensessItemModel.icon,
                   colorFilter: ColorFilter.mode(
-                      isSelected ? Color(0xff4eb7f2) : Colors.white,
+                      isSelected ? Colors.white : Color(0xff4eb7f2),
                       BlendMode.srcIn),
                 )),
               ),

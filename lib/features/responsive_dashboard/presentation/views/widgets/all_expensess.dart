@@ -12,7 +12,9 @@ class AllExpensess extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(16)),
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+      ),
       child: Column(
         children: [
           AllExpensessHedear(),
