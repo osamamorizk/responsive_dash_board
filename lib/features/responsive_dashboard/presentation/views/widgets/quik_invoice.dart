@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_ui_app/core/helpers/app_text_styles.dart';
 import 'package:responsive_ui_app/features/responsive_dashboard/presentation/views/widgets/latest_transaction_list_view.dart';
+import 'package:responsive_ui_app/features/responsive_dashboard/presentation/views/widgets/quik_invoice_form.dart';
 
 class QuikInvoice extends StatelessWidget {
   const QuikInvoice({super.key});
@@ -36,7 +37,12 @@ class QuikInvoice extends StatelessWidget {
             style: AppStyles.styleRegular16(context),
           ),
           SizedBox(height: 12),
-          LatestTransactionListView()
+          LatestTransactionListView(),
+          Divider(
+            height: 48,
+            color: Color(0xffF1F1F1),
+          ),
+          QuickInvoiceForm(),
         ],
       ),
     );
