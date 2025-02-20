@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_ui_app/features/responsive_dashboard/presentation/views/widgets/all_expensess.dart';
 import 'package:responsive_ui_app/features/responsive_dashboard/presentation/views/widgets/custom_drawer.dart';
-import 'package:responsive_ui_app/features/responsive_dashboard/presentation/views/widgets/my_cards_section.dart';
+import 'package:responsive_ui_app/features/responsive_dashboard/presentation/views/widgets/income_section.dart';
+import 'package:responsive_ui_app/features/responsive_dashboard/presentation/views/widgets/my_cards_and_transiction_section.dart';
 import 'package:responsive_ui_app/features/responsive_dashboard/presentation/views/widgets/quik_invoice.dart';
 
 class DesktopDashboard extends StatelessWidget {
@@ -34,7 +35,20 @@ class DesktopDashboard extends StatelessWidget {
             width: 32,
           ),
           Expanded(
-            child: MyCardsSection(),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 40,
+                ),
+                MyCardsAndTransctionHistorySection(),
+                SizedBox(
+                  height: 24,
+                ),
+                Expanded(
+                  child: IncomeSection(),
+                ),
+              ],
+            ),
           )
         ],
       ),
