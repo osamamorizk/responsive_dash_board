@@ -51,12 +51,14 @@ class MyCard extends StatelessWidget {
                     style: AppStyles.styleRegular16(context)
                         .copyWith(color: Colors.white),
                   ),
-                  SizedBox(
-                    height: 24,
-                  )
                 ],
               ),
             ),
+            Flexible(
+              child: SizedBox(
+                height: 20,
+              ),
+            )
           ],
         ),
       ),

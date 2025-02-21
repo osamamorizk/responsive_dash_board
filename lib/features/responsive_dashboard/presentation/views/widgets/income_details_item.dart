@@ -21,6 +21,7 @@ class ItemDetails extends StatelessWidget {
       title: Text(
         itemDetailsModel.title,
         style: AppStyles.styleRegular16(context),
+        overflow: TextOverflow.ellipsis,
       ),
       trailing: Text(
         itemDetailsModel.value,

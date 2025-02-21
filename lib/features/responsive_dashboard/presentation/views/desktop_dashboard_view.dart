@@ -10,48 +10,62 @@ class DesktopDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xffF7F9FA),
-      body: Row(
-        children: [
-          Expanded(
-            child: CustomDrawer(),
-          ),
-          SizedBox(
-            width: 32,
-          ),
-          Expanded(
-            flex: 2,
-            child: Column(
-              children: [
-                SizedBox(height: 40),
-                AllExpensess(),
-                SizedBox(height: 24),
-                QuikInvoice(),
-              ],
-            ),
-          ),
-          SizedBox(
-            width: 32,
-          ),
-          Expanded(
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 40,
+    return Row(
+      children: [
+        Expanded(
+          child: CustomDrawer(),
+        ),
+        SizedBox(
+          width: 32,
+        ),
+        Expanded(
+          flex: 3,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Column(
+                        children: [
+                          SizedBox(height: 40),
+                          AllExpensess(),
+                          SizedBox(height: 24),
+                          QuikInvoice(),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 32,
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 40,
+                          ),
+                          MyCardsAndTransctionHistorySection(),
+                          SizedBox(
+                            height: 24,
+                          ),
+                          Expanded(
+                            child: IncomeSection(),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-                MyCardsAndTransctionHistorySection(),
-                SizedBox(
-                  height: 24,
-                ),
-                Expanded(
-                  child: IncomeSection(),
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
+              )
+            ],
+          ),
+        ),
+        SizedBox(
+          width: 32,
+        ),
+      ],
     );
   }
 }

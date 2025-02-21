@@ -13,7 +13,7 @@ class CustomIndicator extends StatelessWidget {
     return SmoothPageIndicator(
       controller: pageController,
       count: 3,
-      effect: ExpandingDotsEffect(),
+      effect: ExpandingDotsEffect(dotHeight: 12, dotWidth: 12),
       onDotClicked: (index) {},
     );
   }

@@ -17,16 +17,16 @@ class IncomeDetails extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    // return Column(
-    //   crossAxisAlignment: CrossAxisAlignment.start,
-    //   children: items.map((e) => ItemDetails(itemDetailsModel: e)).toList(),
-    // );
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return ItemDetails(itemDetailsModel: items[index]);
-      },
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: items.map((e) => ItemDetails(itemDetailsModel: e)).toList(),
     );
+    // return ListView.builder(
+    //   shrinkWrap: true,
+    //   itemCount: items.length,
+    //   itemBuilder: (context, index) {
+    //     return ItemDetails(itemDetailsModel: items[index]);
+    //   },
+    // );
   }
 }
