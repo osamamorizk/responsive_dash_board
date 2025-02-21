@@ -24,17 +24,19 @@ class AllExpensesItem extends StatelessWidget {
         children: [
           Row(
             children: [
-              CircleAvatar(
-                radius: 30,
-                backgroundColor:
-                    isSelected ? Color(0xff5FBEF3) : Color(0xffFAFAFA),
-                child: Center(
-                    child: SvgPicture.asset(
-                  expensessItemModel.icon,
-                  colorFilter: ColorFilter.mode(
-                      isSelected ? Colors.white : Color(0xff4eb7f2),
-                      BlendMode.srcIn),
-                )),
+              Flexible(
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundColor:
+                      isSelected ? Color(0xff5FBEF3) : Color(0xffFAFAFA),
+                  child: Center(
+                      child: SvgPicture.asset(
+                    expensessItemModel.icon,
+                    colorFilter: ColorFilter.mode(
+                        isSelected ? Colors.white : Color(0xff4eb7f2),
+                        BlendMode.srcIn),
+                  )),
+                ),
               ),
               Spacer(),
               Icon(
@@ -44,22 +46,31 @@ class AllExpensesItem extends StatelessWidget {
             ],
           ),
           SizedBox(height: 34),
-          Text(
-            expensessItemModel.title,
-            style: AppStyles.styleSemiBold16(context)
-                .copyWith(color: isSelected ? Colors.white : null),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              expensessItemModel.title,
+              style: AppStyles.styleSemiBold16(context)
+                  .copyWith(color: isSelected ? Colors.white : null),
+            ),
           ),
           SizedBox(height: 16),
-          Text(
-            'April 2022',
-            style: AppStyles.styleRegular14(context)
-                .copyWith(color: isSelected ? Colors.white : null),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              'April 2022',
+              style: AppStyles.styleRegular14(context)
+                  .copyWith(color: isSelected ? Colors.white : null),
+            ),
           ),
           SizedBox(height: 8),
-          Text(
-            expensessItemModel.price,
-            style: AppStyles.styleSemiBold24(context)
-                .copyWith(color: isSelected ? Colors.white : null),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              expensessItemModel.price,
+              style: AppStyles.styleSemiBold24(context)
+                  .copyWith(color: isSelected ? Colors.white : null),
+            ),
           ),
         ],
       ),

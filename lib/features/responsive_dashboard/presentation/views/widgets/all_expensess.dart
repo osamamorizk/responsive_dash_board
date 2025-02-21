@@ -46,24 +46,55 @@ class _ExpensesListViewState extends State<ExpensesListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items
-          .asMap()
-          .entries
-          .map((e) => Expanded(
-                child: Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: e.key == 1 ? 12 : 0),
-                  child: GestureDetector(
-                      onTap: () => setState(() {
-                            selectedIndex = e.key;
-                          }),
-                      child: AllExpensesItem(
-                        expensessItemModel: e.value,
-                        isSelected: selectedIndex == e.key,
-                      )),
-                ),
-              ))
-          .toList(),
+      spacing: 12,
+      children: [
+        Expanded(
+          child: GestureDetector(
+              onTap: () => setState(() {
+                    selectedIndex = 0;
+                  }),
+              child: AllExpensesItem(
+                expensessItemModel: items[0],
+                isSelected: selectedIndex == 0,
+              )),
+        ),
+        Expanded(
+          child: GestureDetector(
+              onTap: () => setState(() {
+                    selectedIndex = 1;
+                  }),
+              child: AllExpensesItem(
+                expensessItemModel: items[1],
+                isSelected: selectedIndex == 1,
+              )),
+        ),
+        Expanded(
+          child: GestureDetector(
+              onTap: () => setState(() {
+                    selectedIndex = 2;
+                  }),
+              child: AllExpensesItem(
+                expensessItemModel: items[2],
+                isSelected: selectedIndex == 2,
+              )),
+        )
+      ],
     );
+    // Row(
+    //   children: items
+    //       .asMap()
+    //       .entries
+    //       .map((e) => Expanded(
+    //             child: GestureDetector(
+    //                 onTap: () => setState(() {
+    //                       selectedIndex = e.key;
+    //                     }),
+    //                 child: AllExpensesItem(
+    //                   expensessItemModel: e.value,
+    //                   isSelected: selectedIndex == e.key,
+    //                 )),
+    //           ))
+    //       .toList(),
+    // );
   }
 }
